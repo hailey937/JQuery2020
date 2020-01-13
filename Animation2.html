@@ -13,8 +13,13 @@
             height: '200px',
             width: '200px'
           });
+          $("#box1").animate({
+            marginLeft: '0px',
+            height: '90px',
+            width: '60px'
+          });
           $("#box1").queue(function(){
-            $("#box1").css("background-color", "green");
+            $("#box1").css("background-color", "black");
           });
         });
         $("#box2").click(function(){
@@ -22,6 +27,11 @@
             marginLeft: '1820px',
             height: '80px',
             width: '80px'
+          });
+          $("#box2").animate({
+            marginLeft: '0px',
+            height: '70px',
+            width: '40px'
           });
           $("#box2").queue(function(){
             $("#box2").css("background-color", "pink");
@@ -34,10 +44,12 @@
             width: '60px'
           });
           $("#box3").animate({
-            marginLeft: '0px'
+            marginLeft: '0px',
+            height: '60px',
+            width: '30px'
           });
           $("#box3").queue(function(){
-            $("#box3").css("background-color", "yellow");
+            $("#box3").css("background-color", "purple");
           });
         });
       });
