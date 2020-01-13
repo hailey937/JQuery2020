@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animation 2</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#box1").click(function(){
+          $("#box1").animate({
+            marginLeft: '1700px',
+            height: '200px',
+            width: '200px'
+          });
+          $("#box1").queue(function(){
+            $("#box1").css("background-color", "green");
+          });
+        });
+        $("#box2").click(function(){
+          $("#box2").animate({
+            marginLeft: '1820px',
+            height: '80px',
+            width: '80px'
+          });
+          $("#box2").queue(function(){
+            $("#box2").css("background-color", "pink");
+          });
+        });
+        $("#box3").click(function(){
+          $("#box3").animate({
+            marginLeft: '1840px',
+            height: '60px',
+            width: '60px'
+          });
+          $("#box3").animate({
+            marginLeft: '0px'
+          });
+          $("#box3").queue(function(){
+            $("#box3").css("background-color", "yellow");
+          });
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id="box1" style="display:block;height:100px;width:100px;background-color:red;"></div>
+    <div id="box2" style="display:block;height:100px;width:100px;background-color:blue;"></div>
+    <div id="box3" style="display:block;height:100px;width:100px;background-color:brown;"></div>
+  </body>
+</html>
